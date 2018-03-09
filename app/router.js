@@ -8,7 +8,10 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   //this.route('blog');
-  this.route('blog', {path: '/myblog', resetNamespace: true});
+  this.route('blog', {path: '/myblog', resetNamespace: true}, function() {
+    this.route('author');
+    this.route('edit');
+  });
 
 });
 
