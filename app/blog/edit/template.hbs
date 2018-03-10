@@ -11,4 +11,4 @@
     </form>
 {{/if}}
 <button {{action "goBackToIndex"}}>Click me</button>
-<button {{action "toggleEdit"}}>Toggle Edit</button>
+<button {{action "toggleEdit"}}>{{if editable 'Disable Edit' 'Enable Edit'}}</button>

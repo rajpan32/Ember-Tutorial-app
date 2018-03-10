@@ -4,10 +4,11 @@ import { set } from '@ember/object';
 
 export default Route.extend({
 
+//controller can be set here or in the contoller file
   setupController(controller,model)
   {
     set(controller,'post',model);
-    set(controller,'editable',true);
+    //set(controller,'editable',true);
   },
 
   actions:{
