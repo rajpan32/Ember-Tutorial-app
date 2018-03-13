@@ -13,6 +13,7 @@ Router.map(function() {
     this.route('edit');
   });
 
+  this.route('posts');
 });
 
 export default Router;
