@@ -6,7 +6,7 @@ const {
   hasMany
 }=DS;
 
-export default DS.Model.extend({
+export default Model.extend({
   posts:hasMany('post'),
   name: attr('string'),
   email: attr('string'),
