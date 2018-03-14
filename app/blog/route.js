@@ -6,7 +6,7 @@ export default Route.extend({
 
   model()
   {
-    return this.store.createRecord('post',{
+    return this.store.createRecord('posttest',{
       title:'New Title blog',
       author:'Stephen King',
       content:'Default Content'
@@ -15,6 +15,6 @@ export default Route.extend({
 
   setupController(controller,model)
   {
-    set(controller,'post',model);
+    set(controller,'posttest',model);
   }
 });

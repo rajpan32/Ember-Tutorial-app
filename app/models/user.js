@@ -7,7 +7,7 @@ const {
 }=DS;
 
 export default DS.Model.extend({
-  posts:hasMany('posts'),
+  posts:hasMany('post'),
   name: attr('string'),
   email: attr('string'),
   phone: attr('string'),

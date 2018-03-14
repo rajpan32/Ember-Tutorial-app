@@ -1,13 +1,13 @@
 {{#if editable}}
     <form>
     <label for="title">Title:</label>
-    {{input type="text" value=post.title}}
+    {{input type="text" value=posttest.title}}
 
     <label for="title">Author:</label>
-    {{input type="text" value=post.author}}
+    {{input type="text" value=posttest.author}}
 
     <label for="title">Content:</label>
-    {{textarea type="text" value=post.content}}
+    {{textarea type="text" value=posttest.content}}
     </form>
 {{/if}}
 <button {{action "goBackToIndex"}}>Click me</button>

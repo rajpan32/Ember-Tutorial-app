@@ -7,7 +7,7 @@ export default Route.extend({
 //controller can be set here or in the contoller file
   setupController(controller,model)
   {
-    set(controller,'post',model);
+    set(controller,'posttest',model);
     //set(controller,'editable',true);
   },
 
