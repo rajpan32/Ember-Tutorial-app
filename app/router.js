@@ -17,9 +17,9 @@ Router.map(function() {
     this.route('user',{path:'/user/:id'});
     this.route('show',{path:'/:id'});
   });
-  this.route('feeds',{path:'/feeds/:feed_id'});
-  this.route('feedshow');
-  
+  this.route('feeds', function() {
+    this.route('show', {path:'/:id'});
+  });
 });
 
 export default Router;
