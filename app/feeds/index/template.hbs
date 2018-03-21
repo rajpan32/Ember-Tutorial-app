@@ -1,0 +1,6 @@
+<h2>Feeds Page</h2>
+{{#each model as |feed|}}
+  {{#link-to 'feed' feed_id}}{{feed.title}}{{/link-to}}<br>
+{{/each}}
+
+{{outlet}}

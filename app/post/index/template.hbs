@@ -1,5 +1,6 @@
 {{outlet}}
-{{#each posts as |post|}}
+{{#each posts as |post index|}}
+<h2>post number {{index-counter index}}</h2>
 <h3>{{post.title}}</h3>
 <p>{{post.body}}</p>
 <p>By: {{post.user.name}}</p>
