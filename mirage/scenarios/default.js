@@ -1,5 +1,6 @@
 export default function(server) {
 
+  server.createList('feeds',50);
   server.loadFixtures();
 
   /*

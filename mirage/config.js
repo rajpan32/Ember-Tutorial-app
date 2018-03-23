@@ -1,7 +1,33 @@
 export default function() {
 
-  this.get('feeds');
-  this.get('feeds/:id');
+   //this.get('feeds');
+  // this.get('feeds/:id');
+
+  //collection of data
+  this.get('feeds', function(db,request) {
+
+    return {
+      data: db.feeds.map((attrs) => (
+        {type: 'feeds', id: attrs.id, attributes: attrs }
+      ))
+    };
+  });
+
+  //single data
+  this.get('feeds/:id', function(db, request) {
+    let id = request.params.id;
+
+    return {
+      data: {
+        type: 'feeds',
+        id: id,
+        attributes: db.feeds.find(id)
+      }
+    };
+  });
+
+
+
 
   this.passthrough('https://jsonplaceholder.typicode.com/**');
 
