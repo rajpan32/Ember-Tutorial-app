@@ -4,14 +4,21 @@ export default function() {
   // this.get('feeds/:id');
 
   //collection of data
-  this.get('feeds', function(db,request) {
+//   this.get('feeds', function(db,request) {
+// debugger;
+//     return {
+//       data: db.feeds.all((attrs) => (
+//         {type: 'feeds', id: attrs.id, attributes: attrs }
+//       ))
+//     };
+//   });
 
-    return {
-      data: db.feeds.map((attrs) => (
-        {type: 'feeds', id: attrs.id, attributes: attrs }
-      ))
-    };
-  });
+
+  this.get('feeds', (schema) => {
+    //debugger;
+  return schema.feeds.all();
+});
+
 
   //single data
   this.get('feeds/:id', function(db, request) {
